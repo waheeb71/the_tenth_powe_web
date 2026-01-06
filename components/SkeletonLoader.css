@@ -1,0 +1,166 @@
+/* تأثير التوهج المتحرك (Shimmer Effect) */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    animation: shimmer 2s infinite linear;
+    background: linear-gradient(90deg,
+            #f0f0f0 0%,
+            #f8f8f8 20%,
+            #f0f0f0 40%,
+            #f0f0f0 100%);
+    background-size: 1000px 100%;
+    border-radius: 8px;
+}
+
+/* للوضع الداكن */
+@media (prefers-color-scheme: dark) {
+    .shimmer {
+        background: linear-gradient(90deg,
+                #2a2a2a 0%,
+                #3a3a3a 20%,
+                #2a2a2a 40%,
+                #2a2a2a 100%);
+    }
+}
+
+/* بطاقة عامة */
+.skeleton-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.skeleton-image {
+    width: 100%;
+    height: 200px;
+}
+
+.skeleton-content {
+    padding: 20px;
+}
+
+.skeleton-title {
+    height: 24px;
+    margin-bottom: 12px;
+    width: 70%;
+}
+
+.skeleton-text {
+    height: 16px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.skeleton-text.short {
+    width: 60%;
+}
+
+/* دائرة */
+.skeleton-circle {
+    border-radius: 50%;
+}
+
+/* مستطيل */
+.skeleton-rectangle {
+    border-radius: 8px;
+}
+
+/* شبكة بطاقات الخدمات */
+.services-skeleton-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0;
+}
+
+.service-skeleton-card {
+    background: #111B23;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #1e2a35;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skeleton-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    margin-bottom: 32px;
+}
+
+.service-skeleton-card .skeleton-title {
+    height: 28px;
+    width: 65%;
+    margin-bottom: 16px;
+}
+
+.skeleton-description {
+    margin-top: 12px;
+}
+
+.skeleton-description .skeleton-text {
+    margin-bottom: 10px;
+}
+
+/* شبكة بطاقات المشاريع */
+.projects-skeleton-grid {
+    display: flex;
+    gap: 24px;
+    padding: 0;
+    overflow: visible;
+}
+
+.project-skeleton-card {
+    min-width: 85%;
+    background: #0e161b;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .project-skeleton-card {
+        min-width: 450px;
+    }
+}
+
+.skeleton-project-image {
+    width: 100%;
+    height: 400px;
+}
+
+@media (min-width: 768px) {
+    .skeleton-project-image {
+        height: 500px;
+    }
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+
+    .services-skeleton-grid,
+    .projects-skeleton-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .skeleton-image,
+    .skeleton-project-image {
+        height: 180px;
+    }
+
+    .project-skeleton-card {
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sqlalchemy
+asyncpg
+python-telegram-bot
+python-dotenv
+python-multipart
+pydantic
+pydantic-settings
+typing_extensions>=4.5.0

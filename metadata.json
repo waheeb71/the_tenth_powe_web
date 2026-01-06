@@ -1,0 +1,8 @@
+{
+  "name": "The Tenth Power - Engineering & Construction",
+  "description": "A high-end architectural and engineering landing page for The Tenth Power company, specializing in glass facades, steel structures, and modern construction solutions.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
